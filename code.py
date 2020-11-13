@@ -1,15 +1,13 @@
-print("Введите трехзначеное число")
-n = int(input())
+print ("Введите трехзначное число")
+n = input()
 
-total = 0
+suma = 0
 mult = 1
 
-while n > 0:
-    digit = n % 10
-    if digit != 0:
-        total += digit
-        mult *= digit
-    n = n // 10
+for digit in n:
+    if digit.isdigit():
+        suma += int(digit)
+        mult *= int(digit)
 
-print("Сумма:", total)
+print("Сумма:", suma)
 print("Произведение:", mult)
